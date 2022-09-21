@@ -7,8 +7,10 @@ export const Signup = () => {
 
   return (
     <>
+      <h1>Sign Up:</h1>
       <input
         type="text"
+        placeholder="Enter username"
         onInput={(e) => {
           dispatch(setUsername({ payload: e.target.value }));
         }}
