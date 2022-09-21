@@ -10,10 +10,17 @@ export const signupSlice = createSlice({
     setUsername: (state, action) => {
       state.userName = action.payload;
     },
+    setPassword: (state, action) => {
+      state.password = action.payload;
+    },
+    onSignup: (state) => {
+      const userId = Math.random();
+      state.id = userId;
+    },
   },
 });
 
-export const { setUsername } = signupSlice.actions;
+export const { setUsername, setPassword, onSignup } = signupSlice.actions;
 
 // selecting the slice
 export const selectUsername = (state) => state.signup.userName;
